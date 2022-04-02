@@ -16,7 +16,7 @@ if (window.top !== window.self) {
             document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-canvas")[0].shadowRoot.children[0].appendChild(
         (function () {
             const i = document.createElement("img");
-            i.src = "https://cdn.discordapp.com/attachments/958071864767447160/959840227151708277/overlay_w_porter_and_madeon_with_fishmonger.png";
+            i.src = "https://cdn.discordapp.com/attachments/958071864767447160/959842341789790308/overlay_w_porter_and_madeon_with_fishmonger_and_stars.png";
             i.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 1000px;height: 1000px;";
             console.log(i);
             return i;
