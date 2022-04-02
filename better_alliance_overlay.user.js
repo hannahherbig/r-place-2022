@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         April Fools r/starwars_place Allies
+// @name         Madeoncord r/place allies overlay
 // @namespace    http://tampermonkey.net/
 // @version      2.6
 // @description  Keep the canvas beautiful!
 // @author       oralekin from osu! /r/osuplace
-// @overlay maintainer /u/irate_kalypso /r/starwars_place
+// @overlay maintainer /u/go4it7arh /r/madeon
 // @match        https://hot-potato.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @updateURL    https://github.com/hannahherbig/r-place-2022/raw/main/better_alliance_overlay.user.js
@@ -16,7 +16,7 @@ if (window.top !== window.self) {
             document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-canvas")[0].shadowRoot.children[0].appendChild(
         (function () {
             const i = document.createElement("img");
-            i.src = "https://cdn.discordapp.com/attachments/958071864767447160/959960941389316176/overlay_v74.png";
+            i.src = "https://cdn.discordapp.com/attachments/959933935259877416/959963404502708284/overlay_v76.png";
             i.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 2000px;height: 1000px;";
             console.log(i);
             return i;
