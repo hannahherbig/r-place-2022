@@ -14,7 +14,7 @@ if (window.top !== window.self) {
     window.addEventListener('load', () => {
         // Load the image
         const image = document.createElement("img");
-        image.src = "https://cdn.discordapp.com/attachments/959933935259877416/960298328640352266/overlay_full_04031802.png";
+        image.src = "https://cdn.discordapp.com/attachments/959933935259877416/960304619416879125/overlay_full_04031827.png";
         image.onload = () => {
             image.style = `position: absolute; left: 0; top: 0; width: ${image.width/3}px; height: ${image.height/3}px; image-rendering: pixelated; z-index: 1`;
         };
