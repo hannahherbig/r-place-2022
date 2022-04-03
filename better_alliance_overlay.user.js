@@ -4,7 +4,6 @@
 // @version      2.6
 // @description  Keep the canvas beautiful!
 // @author       oralekin from osu! /r/osuplace
-// @overlay maintainer /u/irate_kalypso /r/starwars_place
 // @match        https://hot-potato.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @updateURL    https://github.com/hannahherbig/r-place-2022/raw/main/better_alliance_overlay.user.js
@@ -13,15 +12,27 @@
 // ==/UserScript==
 if (window.top !== window.self) {
     window.addEventListener('load', () => {
-            document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-canvas")[0].shadowRoot.children[0].appendChild(
-        (function () {
-            const i = document.createElement("img");
-            i.src = "https://cdn.discordapp.com/attachments/270333478011273220/960237731697537044/overlay_full_04031401.png";
-            i.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 2000px;height: 1000px;";
-            console.log(i);
-            return i;
-        })())
+        // Load the image
+        const image = document.createElement("img");
+        image.src = "https://cdn.discordapp.com/attachments/960020069553942538/960260090617823252/overlay_full_0431530.png";
+        image.onload = () => {
+            image.style = `position: absolute; left: 0; top: 0; width: ${image.width/3}px; height: ${image.height/3}px; image-rendering: pixelated; z-index: 1`;
+        };
 
+        // Add the image as overlay
+        const camera = document.querySelector("mona-lisa-embed").shadowRoot.querySelector("mona-lisa-camera");
+        const canvas = camera.querySelector("mona-lisa-canvas");
+        canvas.shadowRoot.querySelector('.container').appendChild(image);
+
+        // Add a style to put a hole in the pixel preview (to see the current or desired color)
+        const waitForPreview = setInterval(() => {
+            const preview = camera.querySelector("mona-lisa-pixel-preview");
+            if (preview) {
+              clearInterval(waitForPreview);
+              const style = document.createElement('style')
+              style.innerHTML = '.pixel { clip-path: polygon(-20% -20%, -20% 120%, 37% 120%, 37% 37%, 62% 37%, 62% 62%, 37% 62%, 37% 120%, 120% 120%, 120% -20%); }'
+              preview.shadowRoot.appendChild(style);
+            }
+        }, 100);
     }, false);
-
 }
