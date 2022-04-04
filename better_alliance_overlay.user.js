@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         April Fools r/starwars_place Allies
+// @name         r/place overlay for madeoncord and friends by hannah
 // @namespace    http://tampermonkey.net/
 // @version      2.6
 // @description  Keep the canvas beautiful!
-// @author       oralekin from osu! /r/osuplace
+// @author       hannah from madeoncord r/madeon u/go4it7arh hannah#9876
 // @match        https://hot-potato.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @updateURL    https://github.com/hannahherbig/r-place-2022/raw/main/better_alliance_overlay.user.js
